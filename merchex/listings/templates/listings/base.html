@@ -1,0 +1,19 @@
+{% load static %}  
+<html>  
+<head>  
+    <title>BIBLIO</title>  
+    <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />  
+</head>  
+<body>  
+    <header>  
+        <h1>BIBLIO</h1> <!-- Titre de votre application -->  
+    </header>  
+    <nav>  
+        <a href="{% url 'student_list' %}">ETUDIANTS</a> <!-- Lien vers la section des étudiants -->  
+        <a href="{% url 'livre_list' %}">LIVRES</a> <!-- Lien vers la section des livres -->  
+    </nav>  
+    <div class="content">  
+        {% block content %}{% endblock %} <!-- Section pour le contenu spécifique de chaque page -->  
+    </div>  
+</body>  
+</html>  

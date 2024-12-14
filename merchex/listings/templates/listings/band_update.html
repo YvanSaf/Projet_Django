@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}  
+
+{% block content %}  
+<h1>Mise à jour du groupe</h1>  
+
+<form action="" method="post"> <!-- Formulaire de mise à jour -->  
+  {% csrf_token %}  
+  {{ form.as_p }} <!-- Affiche le formulaire -->  
+  <input type="submit" value="Envoyer"> <!-- Bouton de soumission -->  
+</form>  
+<a href="{% url 'band_list' %}">Retour à la liste des groupes</a> <!-- Lien pour retourner à la liste -->  
+{% endblock %}

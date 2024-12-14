@@ -1,0 +1,70 @@
+{% extends 'listings/base.html' %}
+
+
+ {% block content %}
+ <h1>Liste des Etudiants</h1>  
+    
+
+ <table>  
+    <thead>  
+        <tr>  
+            <th>Nom</th>  
+            <th>Prenom</th>  
+            <th>Date Naissance</th>  
+            <th>Lieu de Naissance</th>    
+            <th>Livre Emprunté</th>    
+            <th>Image du livre</th>    
+            <th>Action</th>    
+        </tr>  
+    </thead>  
+    <tbody>  
+        {% for student in student %}  
+        <tr>  
+            <td>{{ student.nom }}</td>  
+            <td>{{ student.prenom }}</td>  
+            <td>{{ student.date_naissance }}</td>  
+            <td>{{ student.lieu_naissance }}</td>  
+            <td>{{ student.livre }}</td>  
+            <td>  
+                <img src="{{ student.livre.image.url }}" alt="{{ livre.nom }}" style="width:100px;height:auto;">  
+            </td>  
+            <td>  
+                <a href="{% url 'student_update' student.id %}">Modifier</a>  
+                <a href="{% url 'student_delete' student.id %}">Supprimer</a>   
+            </td>  
+        </tr>  
+        {% endfor %}  
+    </tbody>  
+</table>  
+
+<a href="{% url 'student_create' %}">Ajouter un Etudiant</a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

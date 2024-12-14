@@ -1,0 +1,11 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<h1>Contactez-Nous</h1>
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Envoyer">
+</form>
+<p>Vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@example.com">contact@example.com</a></p>
+{% endblock %}

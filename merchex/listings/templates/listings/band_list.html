@@ -1,0 +1,29 @@
+{% extends 'listings/base.html' %}  
+
+{% block content %}  
+<h1>Groupes</h1>  
+<a href="{% url 'band_create' %}">Créer un nouveau groupe</a> <!-- Lien pour créer un groupe -->  
+<table>  
+    <thead>  
+        <tr>  
+            <th>Nom</th>  
+            <th>Biographie</th>  
+            <th>Année de formation</th>  
+            <th>Actions</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        {% for band in bands %}  
+        <tr>  
+            <td><a href="{% url 'band_detail' band.id %}">{{ band.name }}</a></td> <!-- Lien vers le détail du groupe -->  
+            <td>{{ band.biography }}</td> <!-- Affiche la biographie -->  
+            <td>{{ band.year_formed }}</td> <!-- Affiche l'année de formation -->  
+            <td>  
+                <a href="{% url 'band_update' band.id %}">[modifier]</a> <!-- Lien pour modifier le groupe -->  
+                <a href="{% url 'band_delete' band.id %}">[supprimer]</a> <!-- Lien pour supprimer le groupe -->  
+            </td>  
+        </tr>  
+        {% endfor %}  
+    </tbody>  
+</table>  
+{% endblock %}

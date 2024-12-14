@@ -1,0 +1,13 @@
+<!-- listings/templates/listings/band_detail.html -->  
+{% extends 'listings/base.html' %}  
+
+{% block content %}  
+<h2>{{ liste.title }}</h2>  
+<ul>  
+    <li>Type : {{ band.get_type_display }}</li>  
+    <li>Year: {{ band.year}}</li>  
+    <li>Sold : {{ sold.active|yesno:"Yes,No" }}</li>  
+     
+</ul>  
+ 
+{% endblock %}

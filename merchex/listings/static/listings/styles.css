@@ -1,0 +1,137 @@
+  
+        body {  
+            font-family: Arial, sans-serif; /* Police facile à lire */  
+            margin: 0; /* Supprime les marges par défaut */  
+            padding: 0; /* Supprime les espacements internes par défaut */  
+            background-color: #f4f4f4; /* Couleur de fond douce */  
+        }  
+        header {  
+            background: #333; /* Fond sombre pour l'en-tête */  
+            color: white; /* Texte blanc pour le contraste */  
+            padding: 10px 20px; /* Espacement autour du texte */  
+            display: flex; /* Utilisation de flexbox pour l'alignement horizontal */  
+            justify-content: center; /* Centre les éléments dans l'en-tête */  
+            align-items: center; /* Aligne verticalement les éléments */  
+        }  
+        nav {  
+            background: #444; /* Fond légèrement plus clair que l'en-tête */  
+            color: white; /* Couleur du texte */  
+            padding: 15px; /* Espacement autour des liens */  
+            text-align: center; /* Centre les éléments de navigation */  
+            margin-bottom: 20px; /* Marge entre la navigation et le contenu */  
+        }  
+        nav a {  
+            margin: 0 15px; /* Marge autour de chaque lien */  
+            color: white; /* Couleur blanche pour les liens */  
+            text-decoration: none; /* Pas de soulignement par défaut */  
+        }  
+        nav a:hover {  
+            text-decoration: underline; /* Soulignement au survol */  
+        }  
+        .content {  
+            padding: 20px; /* Espacement autour du contenu principal */  
+            display: flex; /* Utilisation de flexbox pour centrer le contenu */  
+            justify-content: center; /* Centre horizontalement le contenu */  
+            align-items: center; /* Centre verticalement le contenu */  
+            flex-direction: column; /* Aligne les éléments en colonne */  
+        }  
+        /* Styles pour la table */  
+table {  
+    width: 90%; /* Largeur du tableau */  
+    margin: 20px auto; /* Centre le tableau */  
+    border-collapse: collapse; /* Évite les doubles bordures */  
+    background-color: #ffffff; /* Fond blanc pour le tableau */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour la profondeur */  
+}  
+
+th, td {  
+    padding: 12px 15px; /* Espacement interne des cellules */  
+    border: 1px solid #dddddd; /* Bordure légère autour des cellules */  
+    text-align: left; /* Alignement à gauche du texte */  
+}  
+
+th {  
+    background-color: #4CAF50; /* Couleur d'arrière-plan pour l'en-tête */  
+    color: white; /* Texte blanc */  
+    font-weight: bold; /* Gras pour les en-têtes */  
+}  
+
+tr:nth-child(even) {  
+    background-color: #f9f9f9; /* Ligne avec couleur de fond pour les lignes paires */  
+}  
+
+tr:hover {  
+    background-color: #f1f1f1; /* Fond au survol d'une ligne */  
+}  
+
+a {  
+    color: #4CAF50; /* Couleur des liens */  
+    text-decoration: none; /* Pas de soulignement par défaut */  
+    padding: 5px 10px; /* Espacement interne des liens */  
+    border: 1px solid #4CAF50; /* Bordure verte */  
+    border-radius: 5px; /* Coins arrondis */  
+    transition: background-color 0.3s, color 0.3s; /* Transition pour un effet de survol */  
+}  
+
+a:hover {  
+    background-color: #4CAF50; /* Couleur de fond au survol */  
+    color: white; /* Texte en blanc au survol */  
+}  
+
+/* Style pour le bouton Ajouter un Livre */  
+.add-button {  
+    display: block; /* En tant qu'élément de bloc pour le centrer */  
+    width: 200px; /* Largeur du bouton */  
+    padding: 10px; /* Espacement interne */  
+    background-color: #4CAF50; /* Couleur de fond */  
+    color: white; /* Texte blanc */  
+    text-align: center; /* Centre le texte */  
+    border: none; /* Pas de bordure */  
+    border-radius: 5px; /* Coins arrondis */  
+    margin: 20px auto; /* Marge supérieure et inférieure */  
+    cursor: pointer; /* Curseur pointeur pour indiquer cliquable */  
+    transition: background-color 0.3s; /* Transition pour le survol */  
+}  
+
+.add-button:hover {  
+    background-color: #45a049; /* Légèrement plus foncé au survol */  
+}les formulaires */  
+        form {  
+            background: white; /* Fond blanc pour le formulaire */  
+            padding: 20px; /* Espacement interne du formulaire */  
+            border-radius: 5px; /* Bords arrondis pour un style plus doux */  
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ombre légère pour profondeur */  
+            width: 300px; /* Largeur fixe du formulaire */  
+            margin: 0 auto; /* Centre le formulaire horizontalement */  
+        }  
+        label {  
+            display: block; /* Rend chaque étiquette un bloc pour qu’elle prenne toute la largeur */  
+            margin-bottom: 5px; /* Marge en bas des étiquettes */  
+            font-weight: bold; /* Texte en gras pour les étiquettes */  
+        }  
+        input[type="text"],  
+        input[type="number"],  
+        input[type="email"],  
+        input[type="url"],  
+        textarea, /* Ajout de 'textarea' pour les champs de texte extensibles */  
+        select { /* Style pour les champs de texte et de sélection */  
+            width: 100%; /* Champ utilise toute la largeur de son conteneur */  
+            padding: 10px; /* Espacement interne des champs */  
+            border: 1px solid #ccc; /* Bordure grise claire */  
+            border-radius: 4px; /* Légèrement arrondi */  
+            margin-bottom: 15px; /* Marge en bas des champs */  
+            box-sizing: border-box; /* Inclut padding et bordure dans la largeur */  
+        }  
+        input[type="submit"] {  
+            background: #333; /* Couleur de fond sombre pour le bouton */  
+            color: white; /* Texte en blanc pour le bouton */  
+            padding: 10px; /* Espacement interne du bouton */  
+            border: none; /* Pas de bordure par défaut */  
+            border-radius: 4px; /* Bords arrondis pour le bouton */  
+            cursor: pointer; /* Curseur pointeur pour indiquer cliquable */  
+            transition: background 0.3s; /* Transition douce au survol */  
+            width: 100%; /* Le bouton s'étend sur toute la largeur du formulaire */  
+        }  
+        input[type="submit"]:hover {  
+            background: #555; /* Couleur de fond plus claire au survol */  
+        }  

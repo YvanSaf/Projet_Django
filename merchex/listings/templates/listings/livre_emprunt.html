@@ -1,0 +1,30 @@
+{% extends 'listings/base.html' %}
+
+
+
+
+{% block content %}
+
+
+<h1>Emprunter un Livre</h1>  
+<form method="post">  
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <button type="submit">Emprunter</button>  
+</form>  
+<a href="{% url 'livre_list' %}">Retour à la Liste des Livres</a>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'listings/base.html' %}  
+
+{% block content %}  
+<h1>Liste des Livres</h1>  
+
+<table>  
+    <thead>  
+        <tr>  
+            <th>Nom</th>  
+            <th>Description</th>  
+            <th>Prix</th>  
+            <th>Quantité</th>  
+            <th>Image</th>  
+            <th>Actions</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        {% for livre in livre %}  
+        <tr>  
+            <td>{{ livre.nom }}</td>  
+            <td>{{ livre.description }}</td>  
+            <td>{{ livre.prix_unitaire }}FCFA</td>  
+            <td>{{ livre.quantite }}</td>  
+            <td>  
+                <img src="{{ livre.image.url }}" alt="{{ livre.nom }}" style="width:100px;height:auto;">  
+            </td>  
+            <td>  
+                <a href="{% url 'livre_update' livre.id %}">Modifier</a>  
+                <a href="{% url 'livre_delete' livre.id %}">Supprimer</a>   
+            </td>  
+        </tr>  
+        {% endfor %}  
+    </tbody>  
+</table>  
+
+<a href="{% url 'livre_create' %}">Ajouter un Livre</a>  
+{% endblock %} 

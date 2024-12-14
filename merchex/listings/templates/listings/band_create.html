@@ -1,0 +1,10 @@
+{% extends 'listings/base.html' %}  
+
+{% block content %}  
+    <h1>Créer un nouveau groupe</h1>  
+    <form action="" method="post">  
+        {% csrf_token %} <!-- Protection CSRF pour éviter les attaques -->  
+        {{ form.as_p }}  <!-- Génère et affiche le formulaire -->  
+        <input type="submit" value="Envoyer"> <!-- Bouton de soumission -->  
+    </form>  
+{% endblock %}
